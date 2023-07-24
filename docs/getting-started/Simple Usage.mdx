@@ -1,0 +1,51 @@
+import ShowAlertBtn from '@site/src/components/show-alert'
+import ShowConfirmBtn from '@site/src/components/show-confirm'
+import ShowPromptBtn from '@site/src/components/show-prompt'
+import Container from '@site/src/components/container'
+
+<Container />
+
+Use the dialogs is almost like use the dialogs native function (`alert`, `confirm` and `prompt`).
+
+> All dialog function will return an `Promise` that only resolves when the user interacts with the dialog, so you can wait for the user interaction to continue your code execution.
+
+## Alert Dialog
+
+```tsx
+import { simpleAlert } from 'react-simple-dialogs'
+
+const showAlert = async () => {
+  await simpleAlert("You can't do this right now.")
+
+  console.log('Alert closed')
+}
+```
+<ShowAlertBtn message="You can't do this right now."/>
+
+## Confirm Dialog
+
+```tsx
+import { simpleConfirm } from 'react-simple-dialogs'
+
+const showConfirmation = async () => {
+  if (await simpleConfirm('Please confirm something')) {
+    console.log('Confirmed! 😄')
+  } else {
+    console.log('Not confirmed. 🥲')
+  }
+}
+```
+<ShowConfirmBtn message="Please confirm something"/>
+
+## Prompt Dialog
+
+```tsx
+import { simplePrompt } from 'react-simple-dialogs'
+
+const showPrompt = async () => {
+  const name = await simplePrompt('Please inform your name')
+
+  console.log(`User name is ${name || 'a mistery'}`)
+}
+```
+<ShowPromptBtn message="Please inform your name" />
