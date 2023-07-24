@@ -7,19 +7,19 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'React Simple Dialogs',
-  tagline: 'A react library to create simple dialogs',
+  tagline: 'A React library to create simple dialogs',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
-  url: 'https://react-simple-dialogs.github.io',
+  url: 'https://pedrohenriquepires.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/react-simple-dialogs-docs',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'pedrohenriquepires', // Usually your GitHub org/user name.
-  projectName: 'react-simple-dialogs.github.io', // Usually your repo name.
+  projectName: 'react-simple-dialogs-docs', // Usually your repo name.
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -56,7 +56,7 @@ const config = {
         disableSwitch: true,
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.png',
       navbar: {
         title: 'React Simple Dialogs',
         logo: {
