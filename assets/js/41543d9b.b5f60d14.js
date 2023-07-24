@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreact_simple_dialogs_github_io=self.webpackChunkreact_simple_dialogs_github_io||[]).push([[720],{3769:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);
