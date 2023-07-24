@@ -3,11 +3,12 @@ import React from 'react'
 
 type Props = {
   message: string
+  options?: object
 }
 
-export default ({ message }: Props) => {
+export default ({ message, options }: Props) => {
   const showConfirmation = async () => {
-    if (await simpleConfirm(message)) {
+    if (await simpleConfirm(options || message)) {
       console.log('Confirmed! 😄')
     } else {
       console.log('Not confirmed. 🥲')

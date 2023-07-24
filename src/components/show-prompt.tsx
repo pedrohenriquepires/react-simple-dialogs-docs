@@ -3,11 +3,12 @@ import { simplePrompt } from 'react-simple-dialogs-tmp'
 
 type Props = {
   message: string
+  options?: object
 }
 
-export default ({ message }: Props) => {
+export default ({ message, options }: Props) => {
   const showPrompt = async () => {
-    const name = await simplePrompt(message)
+    const name = await simplePrompt(options || message)
   
     console.log(`User name is ${name || 'a mistery'}`)
   }

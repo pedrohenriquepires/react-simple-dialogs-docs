@@ -3,11 +3,12 @@ import React from 'react'
 
 type Props = {
   message: string
+  options?: object
 }
 
-export default ({ message }: Props) => {
+export default ({ message, options }: Props) => {
   const showAlert = async () => {
-    await simpleAlert(message);
+    await simpleAlert(options || message);
 
     console.log('Alert closed')
   }

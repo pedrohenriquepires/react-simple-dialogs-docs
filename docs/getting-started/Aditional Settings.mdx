@@ -1,0 +1,116 @@
+---
+sidebar_position: 3
+---
+
+import ShowAlertBtn from '@site/src/components/show-alert'
+import ShowConfirmBtn from '@site/src/components/show-confirm'
+import ShowPromptBtn from '@site/src/components/show-prompt'
+import Container from '@site/src/components/container'
+
+<Container />
+
+In order to customize your dialog you can easily change some properties if needed.
+
+## Alert Dialog
+
+### Properties
+| Property   | Type     | Required   | Default     | What it does                    |
+|------------|----------|------------|-------------|---------------------------------|
+| message    | `string` | `true`     |             | The alert message               |
+| title      | `string` | `false`    | `Attention` | Change the dialog title         |
+| closeLabel | `string` | `false`    | `Close`     | Change the close buttom text |
+
+### Example
+```tsx
+import { simpleAlert } from 'react-simple-dialogs'
+
+const showAlert = async () => {
+  await simpleAlert({
+    message: "You can't do this right now.",
+    closeLabel: 'Ok, now close this',
+    title: "Oops..."
+  })
+
+  console.log('Alert closed')
+}
+```
+<ShowAlertBtn options={{
+  message: "You can't do this right now.",
+  closeLabel: 'Ok, now close this',
+  title: "Oops..."
+}}/>
+
+## Confirm Dialog
+
+### Properties
+| Property     | Type     | Required   | Default     | What it does                    |
+|--------------|----------|------------|-------------|---------------------------------|
+| message      | `string` | `true`     |             | The alert message               |
+| title        | `string` | `false`    | `Attention` | Change the dialog title         |
+| cancelLabel  | `string` | `false`    | `Cancel`    | Change the cancel buttom text   |
+| confirmLabel | `string` | `false`    | `Confirm`   | Change the confirm buttom text  |
+
+### Example
+```tsx
+import { simpleConfirm } from 'react-simple-dialogs'
+
+const showConfirmation = async () => {
+  if (
+    await simpleConfirm({
+      title: "Hey!",
+      message: "You must accept before continue",
+      confirmLabel: 'Ok, I accept.',
+      cancelLabel: 'No, cancel this'
+    })
+  ) {
+    console.log('Confirmed! 😄')
+  } else {
+    console.log('Not confirmed. 🥲')
+  }
+}
+```
+<ShowConfirmBtn options={{
+  title: "Hey!",
+  message: "You must accept before continue",
+  confirmLabel: 'Ok, I accept.',
+  cancelLabel: 'No, cancel this'
+}}/>
+
+## Prompt Dialog
+
+### Properties
+| Property     | Type     | Required   | Default     | What it does                    |
+|--------------|----------|------------|-------------|---------------------------------|
+| message      | `string` | `true`     |             | The alert message               |
+| title        | `string` | `false`    | `Attention` | Change the dialog title         |
+| cancelLabel  | `string` | `false`    | `Cancel`    | Change the cancel buttom text   |
+| confirmLabel | `string` | `false`    | `Confirm`   | Change the confirm buttom text  |
+| inputLabel   | `string` | `false`    | `Value`     | Change the dialog input label   |
+
+### Example
+```tsx
+import { simplePrompt } from 'react-simple-dialogs'
+
+const showConfirmation = async () => {
+  if (
+    await simplePrompt({
+      title: "We need something",
+      message: "You must enter your name in order to continue",
+      confirmLabel: "That's my name!",
+      cancelLabel: 'No, cancel this',
+      inputLabel: 'Your Name'
+    })
+  ) {
+    console.log('Confirmed! 😄')
+  } else {
+    console.log('Not confirmed. 🥲')
+  }
+}
+```
+<ShowPromptBtn options={{
+  title: "We need something",
+  message: "You must enter your name in order to continue",
+  confirmLabel: "That's my name!",
+  cancelLabel: 'No, cancel this',
+  inputLabel: 'Your Name'
+}}/>
