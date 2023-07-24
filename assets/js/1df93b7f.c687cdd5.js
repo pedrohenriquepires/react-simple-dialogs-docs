@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_simple_dialogs_github_io=self.webpackChunkreact_simple_dialogs_github_io||[]).push([[237],{9754:(t,e,i)=>{i.r(e),i.d(e,{default:()=>n});var s=i(7294),a=i(6550),c=i(4996);const n=function(){return s.createElement(a.l_,{to:(0,c.Z)("/docs/getting-started/Introduction")})}}}]);
