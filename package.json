@@ -22,6 +22,7 @@
     "prism-react-renderer": "^1.3.5",
     "react": "^18.0.2",
     "react-dom": "^18.0.2",
+    "react-simple-dialogs": "^1.0.0",
     "react-simple-dialogs-tmp": "^1.0.7"
   },
   "devDependencies": {
